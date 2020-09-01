@@ -36,6 +36,10 @@
             this.CmdKranLinks = new System.Windows.Forms.Button();
             this.CmdKranAus = new System.Windows.Forms.Button();
             this.CmdKranEin = new System.Windows.Forms.Button();
+            this.PnlHaken = new System.Windows.Forms.Panel();
+            this.PnlAusleger = new System.Windows.Forms.Panel();
+            this.PnlHauptelement = new System.Windows.Forms.Panel();
+            this.PnlFundament = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // CmdHakenAus
@@ -110,11 +114,47 @@
             this.CmdKranEin.Text = "Kran ein";
             this.CmdKranEin.UseVisualStyleBackColor = true;
             // 
+            // PnlHaken
+            // 
+            this.PnlHaken.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PnlHaken.Location = new System.Drawing.Point(405, 300);
+            this.PnlHaken.Name = "PnlHaken";
+            this.PnlHaken.Size = new System.Drawing.Size(10, 20);
+            this.PnlHaken.TabIndex = 8;
+            // 
+            // PnlAusleger
+            // 
+            this.PnlAusleger.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PnlAusleger.Location = new System.Drawing.Point(405, 290);
+            this.PnlAusleger.Name = "PnlAusleger";
+            this.PnlAusleger.Size = new System.Drawing.Size(80, 10);
+            this.PnlAusleger.TabIndex = 0;
+            // 
+            // PnlHauptelement
+            // 
+            this.PnlHauptelement.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PnlHauptelement.Location = new System.Drawing.Point(475, 300);
+            this.PnlHauptelement.Name = "PnlHauptelement";
+            this.PnlHauptelement.Size = new System.Drawing.Size(10, 100);
+            this.PnlHauptelement.TabIndex = 0;
+            // 
+            // PnlFundament
+            // 
+            this.PnlFundament.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PnlFundament.Location = new System.Drawing.Point(450, 400);
+            this.PnlFundament.Name = "PnlFundament";
+            this.PnlFundament.Size = new System.Drawing.Size(60, 10);
+            this.PnlFundament.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 450);
+            this.Controls.Add(this.PnlAusleger);
+            this.Controls.Add(this.PnlHauptelement);
+            this.Controls.Add(this.PnlFundament);
+            this.Controls.Add(this.PnlHaken);
             this.Controls.Add(this.CmdKranEin);
             this.Controls.Add(this.CmdKranAus);
             this.Controls.Add(this.CmdKranLinks);
@@ -139,6 +179,10 @@
         private System.Windows.Forms.Button CmdKranLinks;
         private System.Windows.Forms.Button CmdKranAus;
         private System.Windows.Forms.Button CmdKranEin;
+        private System.Windows.Forms.Panel PnlHaken;
+        private System.Windows.Forms.Panel PnlAusleger;
+        private System.Windows.Forms.Panel PnlHauptelement;
+        private System.Windows.Forms.Panel PnlFundament;
     }
 }
 
