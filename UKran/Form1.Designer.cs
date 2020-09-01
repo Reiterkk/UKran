@@ -50,6 +50,7 @@
             this.CmdHakenAus.TabIndex = 0;
             this.CmdHakenAus.Text = "Haken aus";
             this.CmdHakenAus.UseVisualStyleBackColor = true;
+            this.CmdHakenAus.Click += new System.EventHandler(this.CmdHakenAus_Click);
             // 
             // CmdHakenEin
             // 
@@ -59,6 +60,7 @@
             this.CmdHakenEin.TabIndex = 1;
             this.CmdHakenEin.Text = "Haken ein";
             this.CmdHakenEin.UseVisualStyleBackColor = true;
+            this.CmdHakenEin.Click += new System.EventHandler(this.CmdHakenEin_Click);
             // 
             // CmdAuslegerAus
             // 
@@ -68,6 +70,7 @@
             this.CmdAuslegerAus.TabIndex = 2;
             this.CmdAuslegerAus.Text = "Ausleger aus";
             this.CmdAuslegerAus.UseVisualStyleBackColor = true;
+            this.CmdAuslegerAus.Click += new System.EventHandler(this.CmdAuslegerAus_Click);
             // 
             // CmdAuslegerEin
             // 
@@ -77,6 +80,7 @@
             this.CmdAuslegerEin.TabIndex = 3;
             this.CmdAuslegerEin.Text = "Ausleger ein";
             this.CmdAuslegerEin.UseVisualStyleBackColor = true;
+            this.CmdAuslegerEin.Click += new System.EventHandler(this.CmdAuslegerEin_Click);
             // 
             // CmdKranRechts
             // 
