@@ -48,18 +48,45 @@ namespace UKran
 
         private void CmdKranRechts_Click(object sender, EventArgs e)
         {
-            PnlAusleger.Location = new Point(PnlAusleger.Location.X + 10, PnlAusleger.Location.Y);
-            PnlHaken.Location = new Point(PnlHaken.Location.X + 10, PnlHaken.Location.Y);
-            PnlFundament.Location = new Point(PnlFundament.Location.X + 10, PnlFundament.Location.Y);
-            PnlHauptelement.Location = new Point(PnlHauptelement.Location.X + 10, PnlHauptelement.Location.Y);
+            
+            int step = 0;
+            if (PnlFundament.Location.X + PnlFundament.Width <= CmdAuslegerAus.Location.X -10)
+            {
+                step = 10;
+            }
+            else if (PnlFundament.Location.X + PnlFundament.Width <= CmdAuslegerAus.Location.X)
+            {
+                step = CmdAuslegerAus.Location.X - (PnlFundament.Location.X + PnlFundament.Width);
+            }
+            else
+            {
+                step = 0;
+            }
+            PnlAusleger.Location = new Point(PnlAusleger.Location.X + step, PnlAusleger.Location.Y);
+            PnlHaken.Location = new Point(PnlHaken.Location.X + step, PnlHaken.Location.Y);
+            PnlFundament.Location = new Point(PnlFundament.Location.X + step, PnlFundament.Location.Y);
+            PnlHauptelement.Location = new Point(PnlHauptelement.Location.X + step, PnlHauptelement.Location.Y);
         }
 
         private void CmdKranLinks_Click(object sender, EventArgs e)
         {
-            PnlAusleger.Location = new Point(PnlAusleger.Location.X - 10, PnlAusleger.Location.Y);
-            PnlHaken.Location = new Point(PnlHaken.Location.X - 10, PnlHaken.Location.Y);
-            PnlFundament.Location = new Point(PnlFundament.Location.X - 10, PnlFundament.Location.Y);
-            PnlHauptelement.Location = new Point(PnlHauptelement.Location.X - 10, PnlHauptelement.Location.Y);
+            int step = 0;
+            if (PnlAusleger.Location.X >= 10  && PnlFundament.Location.X >= 10)
+            {
+                step = 10;
+            } 
+            else if (PnlAusleger.Location.X >= 0 || PnlFundament.Location.X > 0)
+            {
+                step = Math.Min(PnlAusleger.Location.X, PnlFundament.Location.X);
+            }
+            else
+            {
+                step = 0;
+            }
+            PnlAusleger.Location = new Point(PnlAusleger.Location.X - step, PnlAusleger.Location.Y);
+            PnlHaken.Location = new Point(PnlHaken.Location.X - step, PnlHaken.Location.Y);
+            PnlFundament.Location = new Point(PnlFundament.Location.X - step, PnlFundament.Location.Y);
+            PnlHauptelement.Location = new Point(PnlHauptelement.Location.X - step, PnlHauptelement.Location.Y);
         }
 
         private void CmdKranAus_Click(object sender, EventArgs e)
