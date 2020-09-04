@@ -19,7 +19,20 @@ namespace UKran
 
         private void CmdHakenAus_Click(object sender, EventArgs e)
         {
-            PnlHaken.Height += 10;
+            int step;
+            if (PnlHaken.Location.Y + PnlHaken.Height <= ClientSize.Height -20)
+            {
+                step = 10;
+            }
+            else if (PnlHaken.Location.Y + PnlHaken.Height <= ClientSize.Height - 10)
+            {
+                step = ClientSize.Height - (PnlHaken.Location.Y + PnlHaken.Height) -10;
+            }
+            else
+            {
+                return;
+            }
+            PnlHaken.Height += step;
         }
 
         private void CmdHakenEin_Click(object sender, EventArgs e)
