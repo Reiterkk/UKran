@@ -60,7 +60,7 @@ namespace UKran
             }
             else
             {
-                step = 0;
+                return;
             }
             PnlAusleger.Location = new Point(PnlAusleger.Location.X + step, PnlAusleger.Location.Y);
             PnlHaken.Location = new Point(PnlHaken.Location.X + step, PnlHaken.Location.Y);
@@ -81,7 +81,7 @@ namespace UKran
             }
             else
             {
-                step = 0;
+                return;
             }
             PnlAusleger.Location = new Point(PnlAusleger.Location.X - step, PnlAusleger.Location.Y);
             PnlHaken.Location = new Point(PnlHaken.Location.X - step, PnlHaken.Location.Y);
@@ -91,10 +91,25 @@ namespace UKran
 
         private void CmdKranAus_Click(object sender, EventArgs e)
         {
-            PnlAusleger.Location = new Point(PnlAusleger.Location.X, PnlAusleger.Location.Y -10);
-            PnlHaken.Location = new Point(PnlHaken.Location.X, PnlHaken.Location.Y -10);
-            PnlHauptelement.Location = new Point(PnlHauptelement.Location.X, PnlHauptelement.Location.Y -10);
-            PnlHauptelement.Height += 10;
+            int step;
+            if (PnlAusleger.Location.Y >= 10)
+            {
+                step = 10;
+            }
+            else if (PnlAusleger.Location.Y >= 0)
+            {
+                step = PnlAusleger.Location.Y;
+
+            }
+            else
+            {
+                return;
+            }
+
+            PnlAusleger.Location = new Point(PnlAusleger.Location.X, PnlAusleger.Location.Y -step);
+            PnlHaken.Location = new Point(PnlHaken.Location.X, PnlHaken.Location.Y -step);
+            PnlHauptelement.Location = new Point(PnlHauptelement.Location.X, PnlHauptelement.Location.Y -step);
+            PnlHauptelement.Height += step;
         }
 
         private void CmdKranEin_Click(object sender, EventArgs e)
