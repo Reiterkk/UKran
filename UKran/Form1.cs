@@ -29,9 +29,22 @@ namespace UKran
 
         private void CmdAuslegerAus_Click(object sender, EventArgs e)
         {
-            PnlAusleger.Width += 10;
-            PnlAusleger.Location = new Point(PnlAusleger.Location.X - 10, PnlAusleger.Location.Y);
-            PnlHaken.Location = new Point(PnlHaken.Location.X - 10, PnlHaken.Location.Y);
+            int step = 0;
+            if (PnlAusleger.Location.X >= 10 )
+            {
+                step = 10;
+            }
+            else if (PnlAusleger.Location.X >= 0 )
+            {
+                step = PnlAusleger.Location.X;
+            }
+            else
+            {
+                return;
+            }
+            PnlAusleger.Width += step;
+            PnlAusleger.Location = new Point(PnlAusleger.Location.X - step, PnlAusleger.Location.Y);
+            PnlHaken.Location = new Point(PnlHaken.Location.X - step, PnlHaken.Location.Y);
         }
 
         private void CmdAuslegerEin_Click(object sender, EventArgs e)
